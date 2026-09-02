@@ -9,7 +9,7 @@
 #         name = "name"
 #         values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
 #     }
-#      owners = ["365225442059"]  # this is the owner of the OS, which can be found in AMI section in EC2
+#      owners = ["099720109477"]  # this is the owner of the OS, which can be found in AMI section in EC2
 # }
 
 
