@@ -14,7 +14,7 @@ data "aws_ami" "latest" {     # aws_ami helps to get AMI ID of the os
         name = "name"
         values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
     }
-     owners = ["365225442059"]  # this is the owner of the OS, which can be found in AMI section in EC2
+     owners = ["099720109477"]  # this is the owner of the OS, which can be found in AMI section in EC2
 }
 
 
@@ -33,7 +33,7 @@ data "aws_ami" "latest" {
         name = "name"
         values = ["debian-12-amd64-*-*"]
     }
-     owners = ["365225442059"]
+     owners = ["136693071363"]
 }
 */
 ##################################################################################################################
@@ -51,7 +51,7 @@ data "aws_ami" "latest" {
         name = "name"
         values = ["al2023-ami-*-kernel-*-x86_64"]
     }
-    owners = ["365225442059"]
+    owners = ["137112412989"]
 }
 */
 ###########################################################################################################
