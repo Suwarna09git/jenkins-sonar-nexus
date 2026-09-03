@@ -21,7 +21,7 @@ resource "aws_instance" "nexus-server" {   # we are creating a new instance for 
     user_data = file("./nexus-server.sh")  # this is the script that will be executed during the creation of the instance
     key_name = "terraform" # this is the key name that we have created in console
     
-    vpc_security_groups_ids = [
+    vpc_security_group_ids = [
                                aws_security_group.our-security-group-for-nexus.id
                 ] # this is security grp in which we have openend ports
     root_block_device {
