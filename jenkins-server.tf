@@ -66,7 +66,7 @@ resource "aws_instance" "jenkins-server" {   # we are creating a new instance fo
         user_data = file("./jenkins-server.sh")  # this is the script that will be executed during the creation of the instance
     key_name = "terraform" # this is the key name that we have created in console
     iam_instance_profile = aws_iam_instance_profile.our-instance-profile.name
-    vpc_security_groups_ids = [
+    vpc_security_group_ids = [
                   aws_security_group.our-security-group.id
                ]         # this is security grp in which we have openend ports
     root_block_device {
