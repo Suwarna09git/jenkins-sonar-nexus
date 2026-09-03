@@ -1,19 +1,54 @@
-terraform-vpc-jenkins-DB
-This is the code for creating infrastructure in AWS cloud. when you install terraform and aws cli and configure aws cli this code will run.
+AWS Jenkins SonarQube Nexus Infrastructure using Terraform
+This project provisions DevOps infrastructure on AWS using Terraform.
 
-in order to run this code do following steps
-create bucket with your favorite name and update same in backend.tf file
-terraform init
-this will initiate repo and and install necessory files
+The infrastructure includes separate EC2 servers for:
 
-terraform validate
-this will validate packgaes and config
+Jenkins - CI/CD automation
+SonarQube - Code quality and security analysis
+Nexus Repository - Artifact repository
+Terraform is used to create and manage the required AWS infrastructure, including networking, IAM, security groups, EC2 instances, and server configuration.
 
-terraform plan
-this will create executionn plan
+Architecture
+The infrastructure follows this workflow:
 
-terraform apply
-this will apply that execution plan in AWS cloud
+Developer | v GitHub | v Jenkins | +----> SonarQube | +----> OWASP Dependency-Check | v Maven Build | v Nexus Repository | v Docker | v Docker Hub | v Kubernetes
 
-terraform destroy
-It will destroy all the resources created with this code
+Infrastructure Components
+AWS
+VPC
+Public Subnet
+Internet Gateway
+Route Table
+Security Groups
+IAM
+EC2
+DevOps Tools
+Jenkins
+SonarQube
+Nexus Repository
+OWASP Dependency-Check
+Maven
+Docker
+Docker Hub
+Kubernetes
+Project Structure
+aws-jenkins-sonarqube-nexus-terraform/
+│
+├── data.tf
+├── iam.tf
+├── main.tf
+├── provider.tf
+├── variable.tf
+├── output.tf
+│
+├── jenkins-server.tf
+├── sonar-server.tf
+├── nexus-server.tf
+│
+├── jenkins-server.sh
+├── sonar-server.sh
+├── nexus-server.sh
+│
+├── README.md
+├── .gitignore
+└── .terraform.lock.hcl
